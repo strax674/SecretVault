@@ -1,38 +1,21 @@
+
 plugins {
-    id 'com.android.application'
-    id 'org.jetbrains.kotlin.android'
+    id "com.android.application"
 }
 
 android {
-    namespace 'com.starapps.secretcalculatorvault'
-    compileSdk 33
+    namespace "com.example.secretvault"
+    compileSdk 34
 
     defaultConfig {
-        applicationId "com.starapps.secretcalculatorvault"
-        minSdk 23
-        targetSdk 33
+        applicationId "com.example.secretvault"
+        minSdk 24
+        targetSdk 34
         versionCode 1
         versionName "1.0"
-    }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-
-    kotlinOptions {
-        jvmTarget = '1.8'
     }
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.8.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'com.google.android.gms:play-services-ads:22.0.0'
-    implementation 'androidx.camera:camera-core:1.2.1'
-    implementation 'androidx.camera:camera-camera2:1.2.1'
-    implementation 'androidx.camera:camera-lifecycle:1.2.1'
-    implementation 'androidx.security:security-crypto:1.1.0-alpha06'
+    implementation "androidx.appcompat:appcompat:1.6.1"
 }
