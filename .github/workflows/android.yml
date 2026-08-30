@@ -17,10 +17,13 @@ jobs:
           java-version: "17"
           distribution: "temurin"
 
-      - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+      - name: Build APK with Gradle
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+        continue-on-error: true
 
-      - name: Build APK
+      - name: Fallback Build
         run: gradle assembleDebug
 
       - name: Upload APK
